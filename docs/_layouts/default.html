@@ -7,6 +7,21 @@
 
 {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <style>
+        header {
+            overflow: scroll;
+            max-height: calc(100% - 100px);
+        }
+        footer {
+            display: none;
+        }
+        div.menu ol > li {
+            width: unset;
+            float: unset;
+            border-right: unset;
+            height: unset;
+        }
+    </style>
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -38,8 +53,8 @@
         </ul>
         {% endif %}
 
-        <div>
-            <p class="view">Haxe</p>
+        <div class="menu">
+            <h3>Haxe</h3>
             <ol>
                 <li><a href="{{ site.github.url }}/first_time_haxe">First time using Haxe?</a></li>
                 <li><a href="{{ site.github.url }}/haxe_react">Haxe and React</a></li>
@@ -48,7 +63,7 @@
             </ol>
         </div>
         <div>
-            <p class="view">Redux</p>
+            <h3>Redux</h3>
             <ol>
                 <li><a href="{{ site.github.url }}/redux">Learn Redux</a></li>
                 <li><a href="{{ site.github.url }}/haxe_redux">Haxe and Redux</a></li>
@@ -57,7 +72,7 @@
             </ol>
         </div>
         <div>
-            <p class="view">React native</p>
+            <h3>React native</h3>
             <ol>
                 <li><a href="{{ site.github.url }}/react">Learn React</a></li>
                 <li><a href="{{ site.github.url }}/react_native">Learn React Native</a></li>

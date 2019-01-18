@@ -2,9 +2,9 @@
 ---
 # haxe-react-native-stack
 
-** *An open source tech stack for mobile applications development with Haxe, Redux and React native.* **
+**_An open source tech stack for mobile applications development with Haxe, Redux and React native._**
 
-This documentation is related to the version 1.0.x of the stack.
+This documentation is related to the **version 1.0.x** of the stack.
 
 ## General information
 
