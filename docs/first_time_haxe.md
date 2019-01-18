@@ -15,9 +15,9 @@ Haxe is a high level language, meaning it's a modern language targetting rather 
 It is a strictly typed language. This has a great importance and we will come back to this characteristic regularly later. In many ways, we could compare the use we make of Haxe in this stack with the use of Typescript, but with an even more powerful typing system and some other very nice features.
 
 Here are documentation ressources you should get familiar with to understand the Haxe typing system:
-- [Haxe Types](https://haxe.org/manual/types.html){:target="_blank"}.,
-- [Haxe Typing system](https://haxe.org/manual/type-system.html){:target="_blank"}.,
-- [Type inference with Haxe](https://haxe.org/manual/type-system-type-inference.html){:target="_blank"}..
+- [Haxe Types](https://haxe.org/manual/types.html){:target="_blank"},
+- [Haxe Typing system](https://haxe.org/manual/type-system.html){:target="_blank"},
+- [Type inference with Haxe](https://haxe.org/manual/type-system-type-inference.html){:target="_blank"}.
 
 ### A cross-plaform compiler
 
@@ -30,8 +30,8 @@ In our case, we will focus on using Haxe to compile to javascript, as it is the 
 Haxe also comes with a cross-platform standard library. It means that it already provides an API for many things like `Maths`, `Timer`, `String` or anything that you would commonly find in different platforms. It allows to write code that can be compiled to the different platforms supported by Haxe. It could be summarize as the common denominator of all Haxe platforms.
 
 More about the standard library:
-- [Documentation](https://haxe.org/manual/std.html){:target="_blank"}.,
-- [API documentation](https://api.haxe.org/){:target="_blank"}..
+- [Documentation](https://haxe.org/manual/std.html){:target="_blank"},
+- [API documentation](https://api.haxe.org/){:target="_blank"}.
 
 ### Haxelib
 
@@ -40,10 +40,10 @@ Note that Haxe exists for almost a decade and has its own ecosystem. You will fi
 As with any library and dependency, always check if a lib is maintained and used enough before adding any dependency to your project.
 
 To know more about Haxelib, check out those ressources:
-- [Haxelib](https://haxe.org/manual/haxelib.html){:target="_blank"}.,
-- [Using Haxelib](https://lib.haxe.org/documentation/using-haxelib/){:target="_blank"}.,
-- [Per project setup](https://lib.haxe.org/documentation/per-project-setup/){:target="_blank"}.,
-- [Creating a haxelib package](https://lib.haxe.org/documentation/creating-a-haxelib-package/){:target="_blank"}.,
+- [Haxelib](https://haxe.org/manual/haxelib.html){:target="_blank"},
+- [Using Haxelib](https://lib.haxe.org/documentation/using-haxelib/){:target="_blank"},
+- [Per project setup](https://lib.haxe.org/documentation/per-project-setup/){:target="_blank"},
+- [Creating a haxelib package](https://lib.haxe.org/documentation/creating-a-haxelib-package/){:target="_blank"},
 - [haxelib repository](https://lib.haxe.org/){:target="_blank"}.
 
 ### Flexibility
@@ -63,9 +63,9 @@ Haxe macros are part of your code that gives instructions to the compiler. It ca
 The spectrum of use cases with macros is very wide. I would summarize it by "things you do at compile time" (vs things you do at runtime for example).
 
 Some macro related ressources you should check out:
-- [Haxe macros documentation](https://haxe.org/manual/macro.html){:target="_blank"}.,
-- [Haxe macros cookbook](https://code.haxe.org/category/macros/){:target="_blank"}.,
-- [Some nice haxelib that ease you the use of macros for very generic tasks](https://github.com/jasononeil/compiletime){:target="_blank"}..
+- [Haxe macros documentation](https://haxe.org/manual/macro.html){:target="_blank"},
+- [Haxe macros cookbook](https://code.haxe.org/category/macros/){:target="_blank"},
+- [Some nice haxelib that ease you the use of macros for very generic tasks](https://github.com/jasononeil/compiletime){:target="_blank"}.
 
 ## How do we use it in this stack?
 
