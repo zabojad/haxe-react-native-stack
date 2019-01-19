@@ -2,10 +2,10 @@
 ---
 # Haxe and React
 
-*This part of the documentation assumes you are already familiar with React and the JSX syntax. If not, please take some time to learn about it on the [documentation of React](https://reactjs.org/).*
+*This part of the documentation assumes that you are already familiar with React and the JSX syntax. If not, please take some time to learn about it on the [official React documentation](https://reactjs.org/).*
 
-To use react with Haxe, we need two things:
-- Haxe externs (type definitions) to manipulate the React Component API in type safe way and to render our components.
+To use React with Haxe, we need two things:
+- Haxe externs (type definitions) to manipulate the React Component API in a type safe way and to render our components.
 - Ideally, some way to use the JSX syntax. JSX syntax is not javascript and requires a babel plugin to be converted to javascript.
 
 All of this is implemented in the [haxe-react](https://github.com/massiveinteractive/haxe-react) library, which is central to the Haxe part of our stack.
