@@ -27,7 +27,7 @@ One thing also to check before writing your extern:
 - checkout the lib documentation or API doc if it has one, but double check with the lib source file because the doc can be outdated and/or incomplete.
 
 In our case, the lib API looks like that:
-``js
+```js
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "react-tabs/style/react-tabs.css";
 
