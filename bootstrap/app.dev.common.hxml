@@ -1,4 +1,4 @@
--main myapp.Boot
+-main myapp.App
 -cp src
 
 -lib thx.core

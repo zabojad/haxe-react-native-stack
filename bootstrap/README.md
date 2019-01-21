@@ -4,10 +4,26 @@ This project is based on the [haxe-react-native-stack version 1.0.0](/tree/1.0.0
 
 # Setup
 
-Initial setup must start with the following commands:
+Initial setup starts with installing the haxe dependencies:
 
 ```console
 foo@bar:~$ npm run install-haxe
-foo@bar:~$ cd bin
-foo@bar:~$ react-native init AwesomeProject
+```
+
+Then create the the rnn project in the bin folder
+
+```console
+foo@bar:~$ react-native init AwesomeProject && mv AwesomeProject bin
+```
+
+At last, replace the `bin/index.js` file by this:
+
+```js
+/** @format */
+
+import {AppRegistry} from 'react-native';
+import {HxApp} from './App';
+import {name as appName} from './app.json';
+
+AppRegistry.registerComponent(appName, () => HxApp);
 ```

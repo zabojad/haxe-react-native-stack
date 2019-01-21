@@ -1,14 +1,23 @@
 package myapp;
 
+import react.ReactComponent;
+
 import js.redux.Redux;
 import js.redux.ReduxThunk;
 
 import js.Browser.console;
 
-class App {
+@:expose('HxApp')
+@:ignoreEmptyRender
+class App extends react.ReactComponent {
 
-    public function new() {
-        initApp();
+    public static function main() {
+		new App();
+	}
+
+	public function new() {
+		super();
+		initApp();
     }
 
     private function initApp() {
