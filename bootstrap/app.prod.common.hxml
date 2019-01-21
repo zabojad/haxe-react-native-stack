@@ -1,0 +1,19 @@
+-main myapp.Boot
+-cp src
+
+-lib thx.core
+
+-lib react
+-lib react-native
+-lib react-native-navigation
+-lib react-intl
+ 
+-lib js-object
+-D object-as-dynamic
+
+-lib compiletime
+-lib haxe-lodash
+
+-dce std
+
+--no-traces

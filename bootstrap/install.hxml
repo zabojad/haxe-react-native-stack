@@ -1,0 +1,11 @@
+-lib thx.core:0.43.0 
+
+-lib react:git:https://github.com/massiveinteractive/haxe-react.git#9757fc4a6883eee999399c25157cf156ba6d3002
+-lib react-native:git:https://github.com/haxe-react/haxe-react-native.git
+-lib react-native-navigation:git:https://github.com/haxe-react/react-native-navigation.git
+ 
+-lib js-object:0.0.5
+-lib react-intl:0.1.2
+
+-lib compiletime:2.7.0
+-lib haxe-lodash:git:https://github.com/kiroukou/haxe-lodash-externs.git

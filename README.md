@@ -57,7 +57,7 @@ React native apply React to mobile apps. It also has key characteristics in its 
 
 ### I'm ready to use it
 
-So at this point, you think you are confident enough with the concepts used in the stack. You have checked out the [samples](), run them and even edited them.
+So at this point, you think you are confident enough with the concepts used in the stack. You have checked out the [samples](tree/master/samples), run them and even edited them.
 
 Now it's time to start your first project with your preferred development stack:
 

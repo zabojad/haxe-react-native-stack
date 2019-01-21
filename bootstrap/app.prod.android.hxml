@@ -1,0 +1,4 @@
+
+-D android 
+-js bin/App.android.js
+app.prod.common.hxml

@@ -1,0 +1,4 @@
+
+-D ios 
+-js bin/App.ios.js
+app.dev.common.hxml

@@ -1,0 +1,8 @@
+{
+    "scripts": {
+        "postinstall": "haxelib newrepo && haxelib install --always install.hxml"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}
+  

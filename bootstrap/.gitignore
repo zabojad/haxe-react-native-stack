@@ -1,0 +1,10 @@
+.DS_Store
+*/.DS_Store
+
+**/node_modules/*
+
+**/.haxelib/*
+
+bin/package-lock.json
+bin/App.android.js.map
+bin/App.ios.js.map
