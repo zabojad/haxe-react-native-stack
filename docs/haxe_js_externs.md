@@ -4,17 +4,17 @@
 
 While implementing applications with React native, you will often need to use some extra npm libraries that bring some native module, js lib or UI component you need in your app.
 
-Doing so when you code your app with Haxe (vs ES6) is not a problem, but requires one extra step to keep the advantages of using Haxe in a type safe way: writing the Haxe ["externs"](https://haxe.org/manual/target-javascript-external-libraries.html) of the lib you want to add.
+Doing so when you code your app with Haxe (vs ES6) is not a problem, but requires one extra step to keep the advantages of using Haxe in a type safe way: writing the Haxe ["externs"](https://haxe.org/manual/target-javascript-external-libraries.html){:target="_blank"} of the lib you want to add.
 
 It's more or less the equivalent of writing a type definition with Typescript, except that with Haxe, you *__can__* do better (if you want to) by e.g. defining an API for this lib that will better fit to the Haxe language or to your app use case.
 
-You have plenty examples of Haxe externs you can look at for inspirations, from very sophisticated ones like [haxe-react](https://github.com/massiveinteractive/haxe-react), to straight and trivial ones like [haxe-react-native-navigation](https://github.com/haxe-react/react-native-navigation).
+You have plenty examples of Haxe externs you can look at for inspirations, from very sophisticated ones like [haxe-react](https://github.com/massiveinteractive/haxe-react){:target="_blank"}, to straight and trivial ones like [haxe-react-native-navigation](https://github.com/haxe-react/react-native-navigation){:target="_blank"}.
 
 Here we will just explain the basics of writing what we could just call a type definition, ie: some extra typing `.hx` file that does not change the original API of the lib we add.
 
 ## Example
 
-To illustrate that, let's take the example of some random and simple lib for react we could find on GitHub: [react-tabs](https://github.com/reactjs/react-tabs).
+To illustrate that, let's take the example of some random and simple lib for react we could find on GitHub: [react-tabs](https://github.com/reactjs/react-tabs){:target="_blank"}.
 
 When starting to write an extern, you will generally:
 - start some new repo for it if it's some quite big lib and that you are sure you will use it extensively. In that case, you will probably share your extern on github so that other will use it as well and perhaps also improve it.
@@ -134,6 +134,6 @@ Check out the [samples]({{site.github.repository_url/samples}}){:target="_blank"
 Writing good externs requires some practice. The more you will use Haxe with external libs, the better you'll setup your externs.
 
 Here are the ressources you should checkout to improve your extern skills:
-- [The Haxe documentation on writing externs for javascript](https://haxe.org/manual/target-javascript-external-libraries.html)
-- [The existing Haxe externs for React libs](https://github.com/haxe-react)
-- Some very good externs by [kLabz](https://github.com/kLabz) or [elsassph](https://github.com/elsassph): [haxe-react-router v3](https://github.com/elsassph/haxe-react-router), [haxe-react-router v4](https://github.com/kLabz/haxe-react-router), [haxe-material-ui](https://github.com/kLabz/haxe-material-ui), [haxe-redux-connect](https://github.com/kLabz/haxe-redux-connect)...
+- [The Haxe documentation on writing externs for javascript](https://haxe.org/manual/target-javascript-external-libraries.html){:target="_blank"}
+- [The existing Haxe externs for React libs](https://github.com/haxe-react){:target="_blank"}
+- Some very good externs by [kLabz](https://github.com/kLabz){:target="_blank"} or [elsassph](https://github.com/elsassph){:target="_blank"}: [haxe-react-router v3](https://github.com/elsassph/haxe-react-router){:target="_blank"}, [haxe-react-router v4](https://github.com/kLabz/haxe-react-router){:target="_blank"}, [haxe-material-ui](https://github.com/kLabz/haxe-material-ui){:target="_blank"}, [haxe-redux-connect](https://github.com/kLabz/haxe-redux-connect){:target="_blank"}...
