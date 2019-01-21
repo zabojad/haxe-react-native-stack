@@ -27,6 +27,7 @@ One thing also to check before writing your extern:
 - checkout the lib documentation or API doc if it has one, but double check with the lib source file because the doc can be outdated and/or incomplete.
 
 In our case, the lib API looks like that:
+
 ```js
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "react-tabs/style/react-tabs.css";
@@ -47,7 +48,9 @@ export default () => (
   </Tabs>
 );
 ```
+
 and
+
 ```js
 import { resetIdCounter } from 'react-tabs';
 
@@ -60,6 +63,7 @@ We thus have at least 4 React components from that lib, plus some pure js API (`
 Let's start with the React components:
 - Let's create a folder under `src/js/react/tabs`.
 - Create there a `Tabs.hx` file with the following content:
+
 ```haxe
 package js.react.tabs; // matches our src folder structure
 
@@ -96,7 +100,9 @@ extern class ReactTabs {
     static public function resetIdCounter() : Void;
 }
 ```
+
 - At this point, we should have a working extern that is more that sufficient to run the equivalent of the lib README sample above with Haxe:
+
 ```haxe
 import js.react.tabs.Tabs;
 
