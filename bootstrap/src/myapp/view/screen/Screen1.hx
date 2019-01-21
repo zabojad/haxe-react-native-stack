@@ -4,6 +4,7 @@ import react.ReactComponent;
 import react.ReactMacro.jsx;
 import react.Partial;
 
+import react.native.api.*;
 import react.native.component.*;
 
 import js.redux.ReactRedux;
@@ -37,7 +38,7 @@ class Screen1 extends ReactComponentOfProps<Screen1Props> {
 
 	function viewProps() : Screen1ViewProps {
 		return {
-            
+            intl:props.intl
 		}
 	}
 
@@ -49,16 +50,25 @@ class Screen1 extends ReactComponentOfProps<Screen1Props> {
 }
 
 typedef Screen1ViewProps = {
-
+    intl:IntlShape
 }
 
 @:jsxStatic('render')
 class Screen1View {
     static var styles = Screen1Styles.value;
+    static function instructions(props:Screen1ViewProps){
+        return
+            Platform.select({
+                ios: props.intl.formatMessage({id:'screen1_text3'}),
+                android: props.intl.formatMessage({id:'screen1_text4'}),
+            });
+    }
     static public function render(props:Screen1ViewProps){
         return jsx('
-            <View style=${styles.root}>
-                <FormattedMessage id="screen1_text" />
+            <View style=${styles.container}>
+                <Text style=${styles.welcome}><FormattedMessage id="screen1_text1" /></Text>
+                <Text style=${styles.instructions}><FormattedMessage id="screen1_text2" /></Text>
+                <Text style=${styles.instructions}>{instructions(props)}</Text>
             </View>
         ');
     }

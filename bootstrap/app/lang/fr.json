@@ -1,5 +1,8 @@
 {
     "welcome": "Bonjour et bienvenue!",
     "home_continue_btn": "Continuer",
-    "screen1_text": "Ceci est un squelette d'application, à vous de le continuer pour créer votre app."
+    "screen1_text1": "Bienvenue sur React Native sous steroïds avec Haxe!",
+    "screen1_text2": "Pour commencer, edit App.hx",
+    "screen1_text3": "Pressez Cmd+R pour recharger,\nCmd+D ou secouez pour accéder au menu de développement",
+    "screen1_text4": "Double tappez R sur votre clavier pour recharger,\nSecouez ou pressez le bouton de menu pour accéder au menu de développement"
 }

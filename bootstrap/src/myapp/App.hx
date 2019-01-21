@@ -7,7 +7,7 @@ import js.redux.ReduxThunk;
 
 import js.Browser.console;
 
-@:expose('HxApp')
+@:expose('App')
 @:ignoreEmptyRender
 class App extends react.ReactComponent {
 

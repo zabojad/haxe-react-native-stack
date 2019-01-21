@@ -1,5 +1,8 @@
 {
     "welcome": "Welcome!",
     "home_continue_btn": "Continue",
-    "screen1_text": "This is a sample screen. Edit it to create to create your own app."
+    "screen1_text1": "Welcome to React Native on steroïds with Haxe!",
+    "screen1_text2": "To get started, edit App.js",
+    "screen1_text3": "Press Cmd+R to reload,\nCmd+D or shake for dev menu",
+    "screen1_text4": "Double tap R on your keyboard to reload,\nShake or press menu button for dev menu"
 }

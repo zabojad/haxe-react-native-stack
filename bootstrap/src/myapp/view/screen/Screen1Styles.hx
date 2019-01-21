@@ -6,12 +6,22 @@ class Screen1Styles {
 	static public var value = 
 		StyleSheet.create(
 			{
-				root: {
+				container: {
                     flex: 1,
-                    flexDirection: 'column',
-					alignItems: 'stretch',
-					justifyContent: 'space-around',
-				},
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    backgroundColor: '#F5FCFF',
+                },
+                welcome: {
+                    fontSize: 20,
+                    textAlign: 'center',
+                    margin: 10,
+                },
+                instructions: {
+                    textAlign: 'center',
+                    color: '#333333',
+                    marginBottom: 5,
+                },
 			}
 		);
 }
