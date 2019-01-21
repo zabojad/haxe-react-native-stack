@@ -30,9 +30,9 @@ class TryReact extends ReactComponent {
     }
 
     function render() {
-		var cn = 'foo';
-		return React.createElement('div', {className:cn}, [ React.createElement('div', {className:cn}, ["Awesome!"]) ]);
-	}
+        var cn = 'foo';
+        return React.createElement('div', {className:cn}, [ React.createElement('div', {className:cn}, ["Awesome!"]) ]);
+    }
 }
 ```
 
@@ -53,9 +53,9 @@ class TryReact extends ReactComponent {
     }
 
     function render() {
-		var cn = 'foo';
-		return jsx('<div className={cn}>Awesome!</div>');
-	}
+        var cn = 'foo';
+        return jsx('<div className={cn}>Awesome!</div>');
+    }
 }
 ```
 
@@ -142,13 +142,13 @@ class TryReact extends ReactComponentOfPropsAndState<TryReactProps, TryReactStat
     override function componentDidMount():Void{
         // do some one time stuff once the component is mounted
     }
-	override function componentWillUnmount():Void{
+    override function componentWillUnmount():Void{
         // do some cleaning just before the component is unmounted
     }
-	override function shouldComponentUpdate(nextProps:TryReactProps,nextState:TryReactState):Bool{
+    override function shouldComponentUpdate(nextProps:TryReactProps,nextState:TryReactState):Bool{
         return props.foo.length!=nextProps.foo.length;
     }
-	override function componentDidUpdate(prevProps:TryReactProps, prevState:TryReactState):Void{
+    override function componentDidUpdate(prevProps:TryReactProps, prevState:TryReactState):Void{
         // here, you can trigger things based of comparisons of previous and current state/props
         if (prevProps.foo!=props.foo){
             alert('foo changed!');

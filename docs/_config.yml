@@ -1,18 +1,2 @@
 title: Haxe React native development stack
 theme: jekyll-theme-minimal
-encoding: UTF-8
-kramdown:
-  input: GFM
-  hard_wrap: false
-future: true
-jailed: false
-gfm_quirks: paragraph_end
-lsi: false
-safe: true
-incremental: false
-highlighter: rouge
-gist:
-  noscript: false
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
