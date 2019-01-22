@@ -2,15 +2,15 @@
 ---
 # Haxe and React
 
-*This part of the documentation assumes that you are already familiar with React and the JSX syntax. If not, please take some time to learn about it on the [official React documentation](https://reactjs.org/).*
+*This part of the documentation assumes that you are already familiar with React and the JSX syntax. If not, please take some time to learn about it on the [official React documentation](https://reactjs.org/){:target="_blank"}.*
 
 To use React with Haxe, we need two things:
 - Haxe externs (type definitions) to manipulate the React Component API in a type safe way and to render our components.
 - Ideally, some way to use the JSX syntax. JSX syntax is not javascript and requires a babel plugin to be converted to javascript.
 
-All of this is implemented in the [haxe-react](https://github.com/massiveinteractive/haxe-react) library, which is central to the Haxe part of our stack.
+All of this is implemented in the [haxe-react](https://github.com/massiveinteractive/haxe-react){:target="_blank"} library, which is central to the Haxe part of our stack.
 
-Note that the version 1.0.0 of this stack uses `haxe-react` version `1.4.0`. Later version of the stack will use newer version of `haxe-react` which bring great improvments and go deeper into the integration which Haxe (like with the JSX syntax for example). You can already use some of those improvments by using the [haxe-react #next](https://github.com/kLabz/haxe-react) fork of this haxelib.
+Note that the version 1.0.0 of this stack uses `haxe-react` version `1.4.0`. Later version of the stack will use newer version of `haxe-react` which bring great improvments and go deeper into the integration which Haxe (like with the JSX syntax for example). You can already use some of those improvments by using the [haxe-react #next](https://github.com/kLabz/haxe-react){:target="_blank"} fork of this haxelib.
 
 ## React API without and with JSX
 
@@ -65,7 +65,7 @@ The entire React API is implemented in `haxe-react`.
 
 It means that your components can extends `ReactComponent`, `PureComponent` or just be js functions.
 
-In the case they inherit `ReactComponent`, you can type your component's props and state with [type parameters](https://haxe.org/manual/type-system-type-parameters.html):
+In the case they inherit `ReactComponent`, you can type your component's props and state with [type parameters](https://haxe.org/manual/type-system-type-parameters.html){:target="_blank"}:
 
 ```haxe
 import react.ReactComponent;
