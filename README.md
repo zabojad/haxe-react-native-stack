@@ -1,10 +1,10 @@
 
 <h1 align="center">
-  <img src="logo_haxe.svg"/><img src="logo_redux.svg"/><img src="logo_react_native.svg"/><br>
+  <img src="logo_haxe.svg" height="120px"/><img src="logo_redux.svg" height="120px"/><img src="logo_react_native.svg" height="120px"/><br>
   haxe-react-native-stack
 </h1>
 
-*An open source tech stack for mobile applications development with Haxe, Redux and React native.*
+<p style="text-align: center;">*An open source tech stack for mobile applications development with Haxe, Redux and React native.*</p>
 
 This repository proposes and documents best practices to use together Haxe, React native, Redux and many other libs (react-intl, react-native-navigation...). 
 
