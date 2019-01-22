@@ -16,7 +16,7 @@ Again, we need externs for Haxe to use RNN. Fortnately, they already exist and a
 
 ## Registering and mounting your screens root component
 
-With RNN, our app do not have a single react root component but has as many as we have registered screens. This is because RNN is truly native navigation, not implemented at js level.
+With RNN, our app do not have a single react root component but as many as we have registered screens. This is because RNN is truly native navigation, not implemented at js level.
 
 It has some consequences regarding the use of other libs in the stacks like `react-redux` and `react-intl`. Each of our screens will be wrapped in a `react-redux`'s `Provider` and `react-intl`'s `IntlProvider`:
 
