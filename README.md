@@ -4,7 +4,7 @@
   haxe-react-native-stack
 </h1>
 
-<p style="text-align: center;">*An open source tech stack for mobile applications development with Haxe, Redux and React native.*</p>
+*<p align="center">An open source tech stack for mobile applications development with Haxe, Redux and React native.</p>*
 
 This repository proposes and documents best practices to use together Haxe, React native, Redux and many other libs (react-intl, react-native-navigation...). 
 
