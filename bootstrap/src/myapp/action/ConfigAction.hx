@@ -5,7 +5,7 @@ enum ConfigAction {
 }
 
 abstract ConfigReduxAction(ReduxAction) from ReduxAction to ReduxAction {
-	public function new(v : ConfigAction) {
-		this = { type: Config,  value: v };
-	}
+    public function new(v : ConfigAction) {
+        this = { type: Config,  value: v };
+    }
 }

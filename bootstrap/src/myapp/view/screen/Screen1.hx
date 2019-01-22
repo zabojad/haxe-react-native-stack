@@ -16,8 +16,8 @@ import react.native.navigation.NavProps;
 import js.Browser.console;
 
 typedef Screen1Props = {
-	> NavProps,
-	? intl : IntlShape,
+    > NavProps,
+    ? intl : IntlShape,
 }
 
 @:build(lib.lodash.Lodash.build())
@@ -25,28 +25,28 @@ class Screen1 extends ReactComponentOfProps<Screen1Props> {
 
     static function mapStateToProps(st : myapp.state.State, ownProps : Screen1Props) : Partial<Screen1Props> {
         return {
-		}
+        }
     }
 
     static function mapDispatchToProps(dispatch : myapp.action.Thunk.Dispatch, ownProps : Screen1Props) : Partial<Screen1Props> {
         return {
-		}
+        }
     }
 
     static var Intl = ReactIntl.injectIntl(Screen1);
     static var Reduxed = ReactRedux.connect(mapStateToProps,mapDispatchToProps)(Intl);
 
-	function viewProps() : Screen1ViewProps {
-		return {
+    function viewProps() : Screen1ViewProps {
+        return {
             intl:props.intl
-		}
-	}
+        }
+    }
 
-	override function render() {
-		return jsx('
-        	<Screen1View {...viewProps()} />
+    override function render() {
+        return jsx('
+            <Screen1View {...viewProps()} />
         ');
-	}
+    }
 }
 
 typedef Screen1ViewProps = {

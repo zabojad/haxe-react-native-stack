@@ -82,7 +82,7 @@ Actions should be defined in the `myapp.action` package with one file for each a
 package myapp.action;
 
 enum SessionAction {
-	UserLoggedIn(usr:myapp.dto.User);
+    UserLoggedIn(usr:myapp.dto.User);
     UserLoggedOut;
     // ...
 }
@@ -110,24 +110,24 @@ typedef SessionState = {
 
 // and its corresponding reducer
 class SessionRdcr implements IReducer<SessionAction, SessionState> {
-	public function new() {}
+    public function new() {}
 
-	public var initState:SessionState = {
-		user: null,
-	}
+    public var initState:SessionState = {
+        user: null,
+    }
 
-	public function reduce(state:SessionState, action:SessionAction):SessionState {
-		var partial:Partial<SessionState> = switch(action) {
-			case UserLoggedIn(u):
-				{user:u};
+    public function reduce(state:SessionState, action:SessionAction):SessionState {
+        var partial:Partial<SessionState> = switch(action) {
+            case UserLoggedIn(u):
+                {user:u};
 
-			case UserLoggedOut:
-				initState;
+            case UserLoggedOut:
+                initState;
             
             // ...
-		}
-		return Object.assign({}, state, partial);
-	}
+        }
+        return Object.assign({}, state, partial);
+    }
 }
 ```
 
@@ -148,16 +148,16 @@ import myapp.state.State;
 class SessionThunk {
 
     static public function login(login:String, password:String) {
-		return Action(function(dispatch:Dispatch, getState:Void->State) {
-			myapp.srv.MySrvApi.authUser(
+        return Action(function(dispatch:Dispatch, getState:Void->State) {
+            myapp.srv.MySrvApi.authUser(
                 MyAppAuth(login, password),
                 function(u:myapp.dto.User) {
                     dispatch(UserLoggedIn(u));
                     dispatch(fetchUserData());
                 }
             );
-		});
-	}
+        });
+    }
 
     //...
 }
@@ -195,20 +195,20 @@ typedef MyLoginScreenProps = {
 
 class MyLoginScreen extends ReactComponentOfProps<MyLoginScreenProps>
 {
-	static public var Connected = ReactRedux.connect(mapStateToProps,mapDispatchToProps)(MyLoginScreen);
+    static public var Connected = ReactRedux.connect(mapStateToProps,mapDispatchToProps)(MyLoginScreen);
 
-	static function mapStateToProps(state:State,ownProps:MyLoginScreenPropsPublicProps):Partial<MyLoginScreenRdxProps> {
-		return {
+    static function mapStateToProps(state:State,ownProps:MyLoginScreenPropsPublicProps):Partial<MyLoginScreenRdxProps> {
+        return {
             session: st.session
         }
-	}
-	static function mapDispatchToProps(dispatch:Dispatch,ownProps:MyLoginScreenPropsPublicProps):Partial<MyLoginScreenRdxProps> {
-		return {
+    }
+    static function mapDispatchToProps(dispatch:Dispatch,ownProps:MyLoginScreenPropsPublicProps):Partial<MyLoginScreenRdxProps> {
+        return {
             login: function(l:String,p:String){
                 dispatch(SessionThunk.login(l,p));
             }
         }
-	}
-	// ...
+    }
+    // ...
 }
 ```

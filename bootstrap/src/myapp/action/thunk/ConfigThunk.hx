@@ -9,12 +9,12 @@ import js.Browser.console;
 
 class ConfigThunk {
 
-	static public function init(cb : Void -> Void) : Thunk {
-		return function initThunk(dispatch, getState) {
+    static public function init(cb : Void -> Void) : Thunk {
+        return function initThunk(dispatch, getState) {
             var config : myapp.dto.Parameters = CompileTime.parseJsonFile("app/config/parameters.json");
-			var a : ReduxAction = new ConfigReduxAction(ReceiveLaunchParams(config));
-			dispatch(a);
+            var a : ReduxAction = new ConfigReduxAction(ReceiveLaunchParams(config));
+            dispatch(a);
             cb();
-		}
-	}
+        }
+    }
 }

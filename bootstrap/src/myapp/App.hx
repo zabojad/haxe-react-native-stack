@@ -12,12 +12,12 @@ import js.Browser.console;
 class App extends react.ReactComponent {
 
     public static function main() {
-		new App();
-	}
+        new App();
+    }
 
-	public function new() {
-		super();
-		initApp();
+    public function new() {
+        super();
+        initApp();
     }
 
     private function initApp() {

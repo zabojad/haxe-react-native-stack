@@ -5,7 +5,7 @@ enum IntlAction {
 }
 
 abstract IntlReduxAction(ReduxAction) from ReduxAction to ReduxAction {
-	public function new(v : IntlAction) {
-		this = { type: Intl,  value: v };
-	}
+    public function new(v : IntlAction) {
+        this = { type: Intl,  value: v };
+    }
 }

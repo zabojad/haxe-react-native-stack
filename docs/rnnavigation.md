@@ -44,20 +44,20 @@ import myapp.view.navigation.ComponentId;
 
 class SessionThunk {
 
-	static public function logout() {
-		return Action(function(dispatch:Dispatch, getState:Void->State) {
+    static public function logout() {
+        return Action(function(dispatch:Dispatch, getState:Void->State) {
             dispatch(UserLoggedOut);
             Navigation.setStackRoot(
-				ComponentId.RootStack,
-				{
-					component: {
-						name: 'myapp.Login',
-						options: {
-							topBar: { visible: false, animate: false }
-						}
-					}
-				}
-			);
+                ComponentId.RootStack,
+                {
+                    component: {
+                        name: 'myapp.Login',
+                        options: {
+                            topBar: { visible: false, animate: false }
+                        }
+                    }
+                }
+            );
         }
     }
 

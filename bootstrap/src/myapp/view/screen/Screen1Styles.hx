@@ -3,10 +3,10 @@ package myapp.view.screen;
 import react.native.api.*;
 
 class Screen1Styles {
-	static public var value = 
-		StyleSheet.create(
-			{
-				container: {
+    static public var value = 
+        StyleSheet.create(
+            {
+                container: {
                     flex: 1,
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -22,6 +22,6 @@ class Screen1Styles {
                     color: '#333333',
                     marginBottom: 5,
                 },
-			}
-		);
+            }
+        );
 }

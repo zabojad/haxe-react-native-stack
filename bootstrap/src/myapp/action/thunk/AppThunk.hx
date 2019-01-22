@@ -9,10 +9,10 @@ import js.Browser.console;
 
 class AppThunk {
 
-	static public function init() : Thunk {
-		return function initThunk(dispatch, getState) {
+    static public function init() : Thunk {
+        return function initThunk(dispatch, getState) {
             // here, we pilot the initialization of the app
-			dispatch(
+            dispatch(
                 ConfigThunk.init(
                     dispatch.bind(IntlThunk.init(
                             dispatch.bind(StatusThunk.init(
@@ -22,8 +22,8 @@ class AppThunk {
                     )
                 )
             );
-		}
-	}
+        }
+    }
 
     static public function doSomethingAtStartup() : Thunk {
         return function doSomethingAtStartupThunk(dispatch, getState) {

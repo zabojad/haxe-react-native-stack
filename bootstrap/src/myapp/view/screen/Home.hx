@@ -17,8 +17,8 @@ import react.native.navigation.NavProps;
 import js.Browser.console;
 
 typedef HomeProps = {
-	> NavProps,
-	? intl : IntlShape,
+    > NavProps,
+    ? intl : IntlShape,
 }
 
 @:build(lib.lodash.Lodash.build())
@@ -26,22 +26,22 @@ class Home extends ReactComponentOfProps<HomeProps> {
 
     static function mapStateToProps(st : myapp.state.State, ownProps : HomeProps) : Partial<HomeProps> {
         return {
-		}
+        }
     }
 
     static function mapDispatchToProps(dispatch : myapp.action.Thunk.Dispatch, ownProps : HomeProps) : Partial<HomeProps> {
         return {
-		}
+        }
     }
 
     static var Intl = ReactIntl.injectIntl(Home);
     static var Reduxed = ReactRedux.connect(mapStateToProps,mapDispatchToProps)(Intl);
 
-	@:throttle(1000, {leading:true,trailing:false})
-	function continueCb() : Void {
-		Navigation.push(
+    @:throttle(1000, {leading:true,trailing:false})
+    function continueCb() : Void {
+        Navigation.push(
             props.componentId,
-			{
+            {
                 component: {
                     name: 'myapp.Screen1',
                     options: {
@@ -51,20 +51,20 @@ class Home extends ReactComponentOfProps<HomeProps> {
                     }
                 }
             }
-		);
-	}
+        );
+    }
 
-	function viewProps() : HomeViewProps {
-		return {
+    function viewProps() : HomeViewProps {
+        return {
             continueCb: continueCb
-		}
-	}
+        }
+    }
 
-	override function render() {
-		return jsx('
-        	<HomeView {...viewProps()} />
+    override function render() {
+        return jsx('
+            <HomeView {...viewProps()} />
         ');
-	}
+    }
 }
 
 typedef HomeViewProps = {

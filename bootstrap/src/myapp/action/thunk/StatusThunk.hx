@@ -11,14 +11,14 @@ import js.Browser.console;
 
 class StatusThunk {
 
-	static public function init(cb : Void -> Void) : Thunk {
-		return function initThunk(dispatch, getState) {
+    static public function init(cb : Void -> Void) : Thunk {
+        return function initThunk(dispatch, getState) {
             dispatch(listenNetworkState(cb));
-		}
-	}
+        }
+    }
 
-	static public function listenNetworkState(cb : Void -> Void) : Thunk {
-		return function listenNetworkStateThunk(dispatch,getState) {
+    static public function listenNetworkState(cb : Void -> Void) : Thunk {
+        return function listenNetworkStateThunk(dispatch,getState) {
 
             var handleCI = function(ci) {
                 var v : Bool = true;
@@ -47,6 +47,6 @@ class StatusThunk {
             if (cb != null) {
                 haxe.Timer.delay(cb,0);
             }
-		}
-	}
+        }
+    }
 }
