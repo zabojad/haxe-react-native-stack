@@ -1,12 +1,4 @@
 {
-    "root": "./docs/",
-    "plugins": ["prism", "-highlight"],
-    "pluginsConfig": {
-        "prism": {
-          "ignore": [
-            "js",
-            "jsx"
-          ]
-        }
-      }
+    "root": "./docs/"
+    
 }
