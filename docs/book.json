@@ -1,5 +1,4 @@
 {
-    "root": "./docs",
     "gitbook": "3.x.x",
     "title": "Haxe React native development stack",
     "description": "An open source tech stack for mobile applications development with Haxe, Redux and React native.",
