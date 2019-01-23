@@ -57,59 +57,59 @@ class ContactForm extends ReactComponentOf<ContactFormProps, ContactFormState> {
             email:''
         }
 
-	function new(p : ContactFormProps) {
-		super(p);
+    function new(p : ContactFormProps) {
+        super(p);
         var dv = p.defaultValue;
         if (dv == null) {
             dv = _dv;
         }
-		this.state = { value: dv }
-	}
-
-	function setStateFirstname(st : ContactFormState, p : ContactFormProps, v : Null<String>) : Partial<ContactFormState> {
-		var v = js.Object.assign({}, st.value, { firstname: v });
-		return { value: v };
-	}
-	function setFirstname(v : String) {
-		setState(setStateFirstname.bind(_,_,v));
+        this.state = { value: dv }
     }
 
-	function setStateLastname(st : ContactFormState, p : ContactFormProps, v : Null<String>) : Partial<ContactFormState> {
-		var v = js.Object.assign({}, st.value, { lastname: v });
-		return { value: v };
-	}
-	function setLastname(v : String) {
-		setState(setStateLastname.bind(_,_,v));
+    function setStateFirstname(st : ContactFormState, p : ContactFormProps, v : Null<String>) : Partial<ContactFormState> {
+        var v = js.Object.assign({}, st.value, { firstname: v });
+        return { value: v };
+    }
+    function setFirstname(v : String) {
+        setState(setStateFirstname.bind(_,_,v));
     }
 
-	function setStatePhone(st : ContactFormState, p : ContactFormProps, v : Null<String>) : Partial<ContactFormState> {
-		var v = js.Object.assign({}, st.value, { phone: v });
-		return { value: v };
-	}
-	function setPhone(v : String) {
-		setState(setStatePhone.bind(_,_,v));
+    function setStateLastname(st : ContactFormState, p : ContactFormProps, v : Null<String>) : Partial<ContactFormState> {
+        var v = js.Object.assign({}, st.value, { lastname: v });
+        return { value: v };
+    }
+    function setLastname(v : String) {
+        setState(setStateLastname.bind(_,_,v));
     }
 
-	function setStateEmail(st : ContactFormState, p : ContactFormProps, v : Null<String>) : Partial<ContactFormState> {
-		var v = js.Object.assign({}, st.value, { email: v });
-		return { value: v };
-	}
-	function setEmail(v : String) {
-		setState(setStateEmail.bind(_,_,v));
+    function setStatePhone(st : ContactFormState, p : ContactFormProps, v : Null<String>) : Partial<ContactFormState> {
+        var v = js.Object.assign({}, st.value, { phone: v });
+        return { value: v };
+    }
+    function setPhone(v : String) {
+        setState(setStatePhone.bind(_,_,v));
     }
 
-	function onSubmit() {
-		var value : ContactFormShape = state.value;
+    function setStateEmail(st : ContactFormState, p : ContactFormProps, v : Null<String>) : Partial<ContactFormState> {
+        var v = js.Object.assign({}, st.value, { email: v });
+        return { value: v };
+    }
+    function setEmail(v : String) {
+        setState(setStateEmail.bind(_,_,v));
+    }
+
+    function onSubmit() {
+        var value : ContactFormShape = state.value;
         props.onSubmit(value);
-	}
+    }
 
     override function render() {
         var plhd_01 = props.intl.formatMessage({ id: "placeholder_firstname" });
         var plhd_02 = props.intl.formatMessage({ id: "placeholder_lastname" });
         var plhd_03 = props.intl.formatMessage({ id: "placeholder_phone" });
         var plhd_04 = props.intl.formatMessage({ id: "placeholder_email" });
-		return jsx('
-			<View>
+        return jsx('
+            <View>
                 <View>
                     <TextInput
                         onChangeText=${setFirstname}
@@ -143,9 +143,9 @@ class ContactForm extends ReactComponentOf<ContactFormProps, ContactFormState> {
                 >
                     <FormattedMessage id="btn_submit" />
                 </TouchableOpacity>
-			</View>
-		');
-	}
+            </View>
+        ');
+    }
 }
 ```
 
@@ -168,39 +168,39 @@ import myapp.util.Validators.isNotEmpty; // utils implementing simple validation
 abstract ContactFormShape(ContactFormShapeImpl)
     from ContactFormShapeImpl to ContactFormShapeImpl{
     static var _requiredFields : Array<String> =
-		[
-			"firstname",
-			"lastname",
-			"phone"
-		];
+        [
+            "firstname",
+            "lastname",
+            "phone"
+        ];
 
-	public function sanitize() : ContactFormShape {
-		var fs : ContactFormShape = js.Object.assign({},this);
-		fs.firstname = cleanString(fs.firstname);
-		fs.lastname = cleanString(fs.lastname);
-		fs.phone = cleanString(fs.phone);
-		fs.email = cleanString(fs.email);
-		return fs;
-	}
+    public function sanitize() : ContactFormShape {
+        var fs : ContactFormShape = js.Object.assign({},this);
+        fs.firstname = cleanString(fs.firstname);
+        fs.lastname = cleanString(fs.lastname);
+        fs.phone = cleanString(fs.phone);
+        fs.email = cleanString(fs.email);
+        return fs;
+    }
 
-	public function validate() : ContactFormErrors {
-		var ret : ContactFormErrors = { __errors: false };
+    public function validate() : ContactFormErrors {
+        var ret : ContactFormErrors = { __errors: false };
         for (f in _requiredFields) {
             if (!isNotEmpty(Reflect.field(this,f))) {
                 Reflect.setField(ret,f,"form_required");
                 ret.__errors = true;
             }
         }
-		if (!isEmail(this.email)) {
-			ret.email = "email_expected";
-			ret.__errors = true;
-		}
-		if (!isPhone(this.phone)) {
-			ret.phone = "phone_expected";
-			ret.__errors = true;
-		}
+        if (!isEmail(this.email)) {
+            ret.email = "email_expected";
+            ret.__errors = true;
+        }
+        if (!isPhone(this.phone)) {
+            ret.phone = "phone_expected";
+            ret.__errors = true;
+        }
         return ret;
-	}
+    }
 }
 typedef ContactFormShapeImpl={
     firstname:String,
@@ -214,14 +214,14 @@ abstract ContactFormErrors(ContactFormErrorsImpl)
     from ContactFormErrorsImpl to ContactFormErrorsImpl{
 
     public function getNextError() : Null<String> {
-		if (this.__form != null) return this.__form;
-		for (k in Reflect.fields(this)) {
-			if (k != "__errors" && Reflect.field(this,k) != null) {
-				return Reflect.field(this,k);
-			}
-		}
-		return null;
-	}
+        if (this.__form != null) return this.__form;
+        for (k in Reflect.fields(this)) {
+            if (k != "__errors" && Reflect.field(this,k) != null) {
+                return Reflect.field(this,k);
+            }
+        }
+        return null;
+    }
 }
 typedef ContactFormErrorsImpl={
     firstname:String,
@@ -244,39 +244,39 @@ class ContactForm extends ReactComponentOf<ContactFormProps, ContactFormState> {
     // ...
 
     function new(p : ContactFormProps) {
-		// ...
-		this.state = { value: dv, errors: { __errors: false } };
-	}
+        // ...
+        this.state = { value: dv, errors: { __errors: false } };
+    }
 
     // ...
 
     override function componentDidUpdate(pp : ContactFormProps, ps : ContactFormState) : Void {
-		if (ps.errors != state.errors && state.errors.__errors) {
-			var msg : String = state.errors.getNextError();
+        if (ps.errors != state.errors && state.errors.__errors) {
+            var msg : String = state.errors.getNextError();
             // ToastAndroid is just a suggestion, use whatever you want to display the error message to the user
-			ToastAndroid.showWithGravity(
-				props.intl.formatMessage({ id: msg }),
-				ToastAndroid.LONG,
-				ToastAndroid.BOTTOM
-			);
-		}
-	}
+            ToastAndroid.showWithGravity(
+                props.intl.formatMessage({ id: msg }),
+                ToastAndroid.LONG,
+                ToastAndroid.BOTTOM
+            );
+        }
+    }
 
     function setStateErrors(st : ContactFormState, p : ContactFormProps, errors : ContactFormErrors) : Partial<ContactFormState> {
-		return { errors: errors };
-	}
+        return { errors: errors };
+    }
 
     // ...
 
     function onSubmit() {
-		var errors : Null<ContactFormErrors> = null;
-		var value : ContactFormShape = state.value.sanitize();
-		errors = value.validate();
-		setState({ value: value, errors: errors });
-		if (!errors.__errors) {
-			props.onSubmit(value);
-		}
-	}
+        var errors : Null<ContactFormErrors> = null;
+        var value : ContactFormShape = state.value.sanitize();
+        errors = value.validate();
+        setState({ value: value, errors: errors });
+        if (!errors.__errors) {
+            props.onSubmit(value);
+        }
+    }
     
     // ...
 
@@ -322,13 +322,13 @@ class ContactForm extends ReactComponentOf<ContactFormProps, ContactFormState> {
 
     static function getDerivedStateFromProps(np:ContactFormProps,cs:ContactFormState):Partial<ContactFormState> {
         if (np.errors != null){
-			var ns :Partial<ContactFormState>  = {
-				errors: np.errors,
-			}
-			return ns;
-		}
-		return null;
-	}
+            var ns :Partial<ContactFormState>  = {
+                errors: np.errors,
+            }
+            return ns;
+        }
+        return null;
+    }
 
     // ...
 }
