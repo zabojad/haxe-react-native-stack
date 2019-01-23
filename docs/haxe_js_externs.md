@@ -28,7 +28,7 @@ One thing also to check before writing your extern:
 
 In our case, the lib API looks like that:
 
-```js
+```jsx
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "react-tabs/style/react-tabs.css";
 
