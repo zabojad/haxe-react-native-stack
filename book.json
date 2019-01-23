@@ -1,4 +1,8 @@
 {
-    "root": "./docs/"
-    
+    "root": "./docs/",
+    "title": "Haxe React native development stack",
+    "description": "An open source tech stack for mobile applications development with Haxe, Redux and React native.",
+    "language": "en",
+    "gitbook": ">=3.0.0 <4.0.0",
+    "plugins": ["prism", "-highlight"]
 }
